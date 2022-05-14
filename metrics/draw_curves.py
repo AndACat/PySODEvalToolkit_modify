@@ -53,6 +53,7 @@ def draw_curves(
     if not isinstance(curves_npy_path, (list, tuple)):
         curves_npy_path = [curves_npy_path]
 
+    # 解析npy文件内容的
     curves = {}
     unique_method_names_from_npy = []
     for p in curves_npy_path:
@@ -70,17 +71,18 @@ def draw_curves(
     else:
         for x in dataset_aliases.keys():
             if x not in dataset_names_from_npy:
-                raise ValueError(f"{x} must be contained in\n{dataset_names_from_npy}")
+                raise ValueError(f"{x} must be contained in {dataset_names_from_npy}, you could recompute npy files")
 
-    if method_aliases is not None:
+    if method_aliases is None:
+        target_unique_method_names = unique_method_names_from_npy
+    else:
         target_unique_method_names = list(method_aliases.keys())
         for x in target_unique_method_names:
             if x not in unique_method_names_from_npy:
                 raise ValueError(
                     f"{x} must be contained in\n{sorted(unique_method_names_from_npy)}"
                 )
-    else:
-        target_unique_method_names = unique_method_names_from_npy
+
 
     if our_methods is not None:
         for x in our_methods:
@@ -125,6 +127,7 @@ def draw_curves(
         separated_legend=separated_legend,
         sharey=sharey,
     )
+    aliases = [{"NJUD":["NJUD500", "NJUD485", "NJUD498", "NJUD503"]}]
 
     for idx, (dataset_name, dataset_alias) in enumerate(dataset_aliases.items()):
         dataset_results = curves[dataset_name]
@@ -139,7 +142,9 @@ def draw_curves(
 
         for method_name, method_setting in unique_method_settings.items():
             if method_name not in dataset_results:
-                raise KeyError(f"{method_name} not in {sorted(dataset_results.keys())}")
+                print(f'method:{method_name} will not been draw with dataset:{dataset_name}, because {method_name} doesn\'t exists')
+                continue
+                # raise KeyError(f"{method_name} not in {sorted(dataset_results.keys())}")
             method_results = dataset_results[method_name]
             if mode == "pr":
                 assert isinstance(method_results["p"], (list, tuple))
@@ -154,4 +159,5 @@ def draw_curves(
             curve_drawer.plot_at_axis(
                 idx=idx, method_curve_setting=method_setting, x_data=x_data, y_data=y_data
             )
+    # curve_drawer.show()
     curve_drawer.save(path=save_name)

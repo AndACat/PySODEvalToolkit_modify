@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOD 指标分析</title>
+    <!--jsGrid插件-->
+    <link rel="stylesheet" href="plugins/jsgrid/jsgrid.min.css">
+    <link rel="stylesheet" href="plugins/jsgrid/jsgrid-theme.min.css">
+    <!--toast-->
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="plugins/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="plugins/bootstrap-4.4.1-dist/css/bootstrap-grid.css">
+    <!--sweetalert2-->
+    <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"></link>
+    <!--自定义-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div style="position: center;text-align: center;font-size: 40px">RGBD SOD 指标对比</div>
+<div style="position: center;text-align: center;font-size: 30px" id="dataset_btn">
+    <button class="btn btn-info queryDataset">DES</button>
+    <button class="btn btn-info queryDataset">LFSD</button>
+    <button class="btn btn-info queryDataset">STEREO797</button>
+    <button class="btn btn-info queryDataset">SSD</button>
+    <button class="btn btn-info queryDataset">STEREO1000</button>
+    <button class="btn btn-info queryDataset">DUTRGBD</button>
+    <button class="btn btn-info queryDataset">NLPR</button>
+    <button class="btn btn-info queryDataset">SIP</button>
+    <button class="btn btn-info queryDataset">NJUD</button>
+</div>
+<div style="position: center;text-align: center;font-size: 30px">
+    <span class="num1">排第1</span>
+    <span class="num2">排第2</span>
+    <span class="num3">排第3</span>
+</div>
+<br><br>
+<center>
+    <div  style="width: 90%;">
+            <table id="jsGrid">
+            </table>
+    </div>
+</center>
+<!--insert mode-->
+<div class="modal fade" id="insertModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">添加</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="dataset_select_insert">数据集</label><br>
+                        <select id="dataset_select_insert"></select>
+                    </div>
+                    <div class="col-3">
+                        <label for="method_name_insert">模型名称</label>
+                        <input class="form-control" id="method_name_insert">
+                    </div>
+                    <div class="col-3">
+                        <label for="method_data_insert">模型发行时间</label>
+                        <input class="form-control" id="method_data_insert">
+                    </div>
+                    <div class="col-3">
+                        <label for="method_papername_insert">模型论文名称</label>
+                        <input class="form-control" id="method_papername_insert">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="method_paperlink_insert">论文链接</label>
+                        <input class="form-control" id="method_paperlink_insert">
+                    </div>
+                    <div class="col-9">
+                        <label for="method_describes_insert">论文描述</label>
+                        <input class="form-control" id="method_describes_insert">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="metrics_mae_insert">mae</label>
+                        <input class="form-control" id="metrics_mae_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_maxf_insert">maxf</label>
+                        <input class="form-control" id="metrics_maxf_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_avgf_insert">avgf</label>
+                        <input class="form-control" id="metrics_avgf_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_adpf_insert">adpf</label>
+                        <input class="form-control" id="metrics_adpf_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_maxe_insert">maxe</label>
+                        <input class="form-control" id="metrics_maxe_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_avge_insert">avge</label>
+                        <input class="form-control" id="metrics_avge_insert">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="metrics_adpe_insert">adpe</label>
+                        <input class="form-control" id="metrics_adpe_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_sm_insert">sm</label>
+                        <input class="form-control" id="metrics_sm_insert">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_wfm_insert">wfm</label>
+                        <input class="form-control" id="metrics_wfm_insert">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="metrics_save_insert">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--edit mode-->
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">编辑</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <input type="hidden" id="metrics_uid_edit">
+                    <input type="hidden" id="metrics_method_uid_edit">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="dataset_select_edit">数据集</label><br>
+                        <select id="dataset_select_edit"></select>
+                    </div>
+                    <div class="col-3">
+                        <label for="method_name_edit">模型名称</label>
+                        <input class="form-control" id="method_name_edit">
+                    </div>
+                    <div class="col-3">
+                        <label for="method_data_edit">模型发行时间</label>
+                        <input class="form-control" id="method_data_edit">
+                    </div>
+                    <div class="col-3">
+                        <label for="method_papername_edit">模型论文名称</label>
+                        <input class="form-control" id="method_papername_edit">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="method_paperlink_edit">论文链接</label>
+                        <input class="form-control" id="method_paperlink_edit">
+                    </div>
+                    <div class="col-9">
+                        <label for="method_describes_edit">论文描述</label>
+                        <input class="form-control" id="method_describes_edit">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="metrics_mae_edit">mae</label>
+                        <input class="form-control" id="metrics_mae_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_maxf_edit">maxf</label>
+                        <input class="form-control" id="metrics_maxf_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_avgf_edit">avgf</label>
+                        <input class="form-control" id="metrics_avgf_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_adpf_edit">adpf</label>
+                        <input class="form-control" id="metrics_adpf_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_maxe_edit">maxe</label>
+                        <input class="form-control" id="metrics_maxe_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_avge_edit">avge</label>
+                        <input class="form-control" id="metrics_avge_edit">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="metrics_adpe_edit">adpe</label>
+                        <input class="form-control" id="metrics_adpe_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_sm_edit">sm</label>
+                        <input class="form-control" id="metrics_sm_edit">
+                    </div>
+                    <div class="col-2">
+                        <label for="metrics_wfm_edit">wfm</label>
+                        <input class="form-control" id="metrics_wfm_edit">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="metrics_save_edit">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<!--jquery-->
+<script src="plugins/jquery/jquery-3.5.1.min.js"></script>
+<!--表格插件-->
+<script src="plugins/jsgrid/jsgrid.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<!-- Toastr -->
+<script src="plugins/sweetalert2/sweetalert2.js"></script>
+<!--自定义-->
+<script src="data.js"></script>
+<script src="index.js"></script>
+<script src="jsGridUtil.js"></script>
+</html>

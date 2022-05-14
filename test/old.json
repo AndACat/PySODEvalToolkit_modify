@@ -1,0 +1,1122 @@
+[
+  {
+    "uid": "0b80f826a68742cc85624a96dbe8b9ec",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "1e89036489c4407389e91849702f8081",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:24:07"
+    },
+    "mae": 0.20298,
+    "maxf": 0.42048,
+    "avgf": 0.65117,
+    "adpf": 0.16947,
+    "maxe": 0.80246,
+    "avge": 0.29594,
+    "adpe": 0.89714,
+    "sm": 0.96957,
+    "wfm": 0.0976,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "17c3259666824e228b6c865a2e5541dd",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "e6cdc02adff444358aa91715f72588e8",
+      "name": "DenseNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:32"
+    },
+    "mae": 0.96378,
+    "maxf": 0.23096,
+    "avgf": 0.94507,
+    "adpf": 0.08699,
+    "maxe": 0.98419,
+    "avge": 0.6253,
+    "adpe": 0.56506,
+    "sm": 0.29319,
+    "wfm": 0.28705,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "29c52813ac17411e9b1c151142306b91",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "22fa58d506364947bb08438a7278c82f",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:11"
+    },
+    "mae": 0.1956,
+    "maxf": 0.4164,
+    "avgf": 0.94413,
+    "adpf": 0.80153,
+    "maxe": 0.89355,
+    "avge": 0.2616,
+    "adpe": 0.52833,
+    "sm": 0.98734,
+    "wfm": 0.74736,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "2b00e8a969c8423e8161d1d29d2ceabc",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "a7cb5581739140c1b63f0336a23ba7c5",
+      "name": "DBLNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "asdad",
+      "sort": "2022-05-13T23:25:58"
+    },
+    "mae": 0.65752,
+    "maxf": 0.36174,
+    "avgf": 0.15647,
+    "adpf": 0.42719,
+    "maxe": 0.67323,
+    "avge": 0.35971,
+    "adpe": 0.89425,
+    "sm": 0.84402,
+    "wfm": 0.53897,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "2b618437e15d42b385773186998e9a7e",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "e6cdc02adff444358aa91715f72588e8",
+      "name": "DenseNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:32"
+    },
+    "mae": 0.05152,
+    "maxf": 0.06462,
+    "avgf": 0.30949,
+    "adpf": 0.61206,
+    "maxe": 0.708,
+    "avge": 0.93563,
+    "adpe": 0.72261,
+    "sm": 0.11733,
+    "wfm": 0.10366,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "325dbe0711ba4fb3aba98515e25be387",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "e6cdc02adff444358aa91715f72588e8",
+      "name": "DenseNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:32"
+    },
+    "mae": 0.05152,
+    "maxf": 0.06462,
+    "avgf": 0.30949,
+    "adpf": 0.61206,
+    "maxe": 0.708,
+    "avge": 0.93563,
+    "adpe": 0.72261,
+    "sm": 0.11733,
+    "wfm": 0.10366,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "42bf59c425f34ffa97aa6b92045b0617",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.06394,
+    "maxf": 0.44574,
+    "avgf": 0.07044,
+    "adpf": 0.77259,
+    "maxe": 0.79386,
+    "avge": 0.09742,
+    "adpe": 0.92137,
+    "sm": 0.23445,
+    "wfm": 0.46223,
+    "sort": "2022-05-11T21:23:39"
+  },
+  {
+    "uid": "58ebd22841814f6291655dd8df318c30",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.68128,
+    "maxf": 0.13665,
+    "avgf": 0.31607,
+    "adpf": 0.36605,
+    "maxe": 0.47596,
+    "avge": 0.65871,
+    "adpe": 0.84264,
+    "sm": 0.58474,
+    "wfm": 0.92915,
+    "sort": "2022-05-11T21:38:48"
+  },
+  {
+    "uid": "6072fd210f2f4c37b85624a656af51e2",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 1.0,
+    "maxf": 1.0,
+    "avgf": 0.68453,
+    "adpf": 1.0,
+    "maxe": 1.0,
+    "avge": 1.0,
+    "adpe": 1.0,
+    "sm": 1.0,
+    "wfm": 1.0,
+    "sort": "2022-05-11T21:23:39"
+  },
+  {
+    "uid": "72424e5097514b7fb6d6302ccf920b4e",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.1388,
+    "maxf": 0.44253,
+    "avgf": 0.7099,
+    "adpf": 0.83443,
+    "maxe": 0.23057,
+    "avge": 0.73548,
+    "adpe": 0.65611,
+    "sm": 0.27009,
+    "wfm": 0.47941,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "7cdd5c7a0f9144bca41bb2b628cf4131",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.41538,
+    "maxf": 0.61132,
+    "avgf": 0.49795,
+    "adpf": 0.32741,
+    "maxe": 0.33274,
+    "avge": 0.4782,
+    "adpe": 0.76595,
+    "sm": 0.66888,
+    "wfm": 0.54216,
+    "sort": "2022-05-11T21:38:48"
+  },
+  {
+    "uid": "80a2a865091b4d5ab5fbe6482d69e298",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "22fa58d506364947bb08438a7278c82f",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:11"
+    },
+    "mae": 0.32764,
+    "maxf": 0.75406,
+    "avgf": 0.01798,
+    "adpf": 0.0768,
+    "maxe": 0.79223,
+    "avge": 0.27408,
+    "adpe": 0.98847,
+    "sm": 0.73222,
+    "wfm": 0.0271,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "815c1acaeb934541a52c92c94079e087",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "a7cb5581739140c1b63f0336a23ba7c5",
+      "name": "DBLNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "asdad",
+      "sort": "2022-05-13T23:25:58"
+    },
+    "mae": 0.49128,
+    "maxf": 0.62559,
+    "avgf": 0.3664,
+    "adpf": 0.25661,
+    "maxe": 0.0675,
+    "avge": 0.61529,
+    "adpe": 0.77673,
+    "sm": 0.25039,
+    "wfm": 0.23721,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "8c449098add6458e9d503839dfbb7645",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.06394,
+    "maxf": 0.44574,
+    "avgf": 0.07044,
+    "adpf": 0.77259,
+    "maxe": 0.79386,
+    "avge": 0.09742,
+    "adpe": 0.92137,
+    "sm": 0.23445,
+    "wfm": 0.46223,
+    "sort": "2022-05-11T21:23:39"
+  },
+  {
+    "uid": "99f4c079712948f79bec12a3f632e412",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "1e89036489c4407389e91849702f8081",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:24:07"
+    },
+    "mae": 0.91954,
+    "maxf": 0.19928,
+    "avgf": 0.8692,
+    "adpf": 0.64228,
+    "maxe": 0.25674,
+    "avge": 0.54677,
+    "adpe": 0.43068,
+    "sm": 0.89216,
+    "wfm": 0.78844,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "a0325d7f1a7540b58cf509d74bd9c8c5",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "a7cb5581739140c1b63f0336a23ba7c5",
+      "name": "DBLNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "asdad",
+      "sort": "2022-05-13T23:25:58"
+    },
+    "mae": 0.65752,
+    "maxf": 0.36174,
+    "avgf": 0.15647,
+    "adpf": 0.42719,
+    "maxe": 0.67323,
+    "avge": 0.35971,
+    "adpe": 0.89425,
+    "sm": 0.84402,
+    "wfm": 0.53897,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "a5458877afcb4edf8d8c4d18e31818b0",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.1388,
+    "maxf": 0.44253,
+    "avgf": 0.7099,
+    "adpf": 0.83443,
+    "maxe": 0.23057,
+    "avge": 0.73548,
+    "adpe": 0.65611,
+    "sm": 0.27009,
+    "wfm": 0.47941,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "b0106597906b44d5bd8f5c11e97a6f6a",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.49992,
+    "maxf": 0.27076,
+    "avgf": 0.5988,
+    "adpf": 0.43898,
+    "maxe": 0.82477,
+    "avge": 0.73585,
+    "adpe": 0.27299,
+    "sm": 0.53871,
+    "wfm": 0.84895,
+    "sort": "2022-05-11T21:23:39"
+  },
+  {
+    "uid": "b43895e626324f1c91c032a99ec15db0",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.95622,
+    "maxf": 0.37259,
+    "avgf": 0.50021,
+    "adpf": 0.9396,
+    "maxe": 0.44573,
+    "avge": 0.00993,
+    "adpe": 0.78346,
+    "sm": 0.17004,
+    "wfm": 0.80503,
+    "sort": "2022-05-11T21:38:48"
+  },
+  {
+    "uid": "ba75ac400be84c59b1899cf0b68820b1",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "a7cb5581739140c1b63f0336a23ba7c5",
+      "name": "DBLNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "asdad",
+      "sort": "2022-05-13T23:25:58"
+    },
+    "mae": 0.74525,
+    "maxf": 0.81831,
+    "avgf": 0.50011,
+    "adpf": 0.12199,
+    "maxe": 0.25986,
+    "avge": 0.29125,
+    "adpe": 0.61616,
+    "sm": 2.6E-4,
+    "wfm": 0.7542,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "ca0307c0bdde42d094ef7334275efaa3",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "e6cdc02adff444358aa91715f72588e8",
+      "name": "DenseNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:32"
+    },
+    "mae": 0.38984,
+    "maxf": 0.26649,
+    "avgf": 0.99145,
+    "adpf": 0.64504,
+    "maxe": 0.22685,
+    "avge": 0.59144,
+    "adpe": 0.72457,
+    "sm": 0.39136,
+    "wfm": 0.34124,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "d06ef872fe2641ea898ffd2ebeaf9c6a",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.17575,
+    "maxf": 0.70654,
+    "avgf": 0.42241,
+    "adpf": 0.68137,
+    "maxe": 0.32284,
+    "avge": 0.3971,
+    "adpe": 0.20849,
+    "sm": 0.57664,
+    "wfm": 0.8387,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "d208528f1b7044b3a66c3f35ed7a2a0b",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.193,
+    "maxf": 0.76771,
+    "avgf": 0.01978,
+    "adpf": 0.73612,
+    "maxe": 0.10245,
+    "avge": 0.0049,
+    "adpe": 0.90769,
+    "sm": 0.01116,
+    "wfm": 0.32409,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "dcd71aaba2644ed5aa7469a9cea1189b",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "1e89036489c4407389e91849702f8081",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:24:07"
+    },
+    "mae": 0.91954,
+    "maxf": 0.19928,
+    "avgf": 0.8692,
+    "adpf": 0.64228,
+    "maxe": 0.25674,
+    "avge": 0.54677,
+    "adpe": 0.43068,
+    "sm": 0.89216,
+    "wfm": 0.78844,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "ddf76c47627e4b2685eb200ba87dce4a",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "d4ca854ef78c4a62bda7b311b4af2e6f",
+      "name": "Ours",
+      "data": "2022-05-09",
+      "paperName": "SpNet",
+      "paperLink": "",
+      "describes": "1111111111112222222222",
+      "sort": "2022-05-09T14:35:13"
+    },
+    "mae": 0.41538,
+    "maxf": 0.61132,
+    "avgf": 0.49795,
+    "adpf": 0.32741,
+    "maxe": 0.33274,
+    "avge": 0.4782,
+    "adpe": 0.76595,
+    "sm": 0.66888,
+    "wfm": 0.54216,
+    "sort": "2022-05-11T21:38:48"
+  },
+  {
+    "uid": "dfe671891a0741fe84d1b30f4a58ea6d",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "1e89036489c4407389e91849702f8081",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:24:07"
+    },
+    "mae": 0.521,
+    "maxf": 0.36203,
+    "avgf": 0.80733,
+    "adpf": 0.65687,
+    "maxe": 0.70504,
+    "avge": 0.01776,
+    "adpe": 0.19161,
+    "sm": 0.52601,
+    "wfm": 0.69067,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "e494fd7d04874efc9bdab00ce46735da",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "22fa58d506364947bb08438a7278c82f",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:11"
+    },
+    "mae": 0.1956,
+    "maxf": 0.4164,
+    "avgf": 0.94413,
+    "adpf": 0.80153,
+    "maxe": 0.89355,
+    "avge": 0.2616,
+    "adpe": 0.52833,
+    "sm": 0.98734,
+    "wfm": 0.74736,
+    "sort": "2022-05-14T11:07:45"
+  },
+  {
+    "uid": "f0c1dfb606984fa780b7a68bfa19d821",
+    "dataset": {
+      "uid": "af9f44867b4449b1a7dbf7f698a40600",
+      "name": "NJUD",
+      "sodTaskType": {
+        "uid": "7c5ce7ed89de4c35838b97f24e459c0c",
+        "type": "3D RGB-D/T Saliency Detection",
+        "describes": "rgbd结合深度图的显著性目标检测方法",
+        "sort": "2022-05-09T14:04:51"
+      },
+      "date": "2014-01-01",
+      "pub": "ECCV",
+      "trainSetCount": null,
+      "testSetCount": null,
+      "allSetCount": 1985,
+      "describes": null,
+      "downloadLink": null,
+      "sort": "2022-05-08T22:16:31"
+    },
+    "method": {
+      "uid": "22fa58d506364947bb08438a7278c82f",
+      "name": "VggNet",
+      "data": null,
+      "paperName": "SpNet",
+      "paperLink": null,
+      "describes": null,
+      "sort": "2022-05-13T23:25:11"
+    },
+    "mae": 0.423,
+    "maxf": 0.7143,
+    "avgf": 0.53654,
+    "adpf": 0.67821,
+    "maxe": 0.7335,
+    "avge": 0.97157,
+    "adpe": 0.14674,
+    "sm": 0.54567,
+    "wfm": 0.42598,
+    "sort": "2022-05-14T11:07:45"
+  }
+]

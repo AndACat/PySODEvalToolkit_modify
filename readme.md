@@ -1,6 +1,27 @@
 # 基于python的显著性目标检测测评工具箱
-
 A Python-based **RGB/Co-RGB/RGB-D** salient object detection evaluation toolbox.
+
+tips:本项目改编自https://github.com/lartpang/PySODEvalToolkit <br>
+本项目改编的目的是为了更方便我自己使用，下面是简要使用步骤，如有不了解的，可以直接发Issue或者邮件1677688026@qq.com
+#改编地方
+1. 改编了配置文件等相关，更方便我自己使用
+2. 增加了NJUD多个数据集版本之间的直接合并，可能也只有我自己知道是什么意思
+3. 增加了将npy文件转换为可视化html页面，更加方便的查看指标排名，如下图，可直接查看指标的排名名次等信息
+![img.png](img.png)
+#使用步骤
+1. 先配置文件
+配置好`config/config_method_ours.py``config_method_others.py``config_dataset.py`
+2. 转换配置文件
+使用`pyconfig_to_jsonconfig.py`将配置文件转换为`json/config_dataset.json``json/config_method_others.json ``json/config_method_ours.json`
+3. 检查转换后的配置文件是否有错误
+使用`tools/check_path.py`检查是否有转换错误
+4. 计算数据
+使用`eval.py`计算数据，数据会被自动保存到npy文件中
+5. 根据计算得到的数据，绘制可视化网页
+使用`tools/npy_to_htmls2.py`将npy转为可视化的html页面
+6. 根据计算得到的数据，绘制可视化图片
+使用`plot.py`将npy文件绘制成图片的形式
+
 
 ## TODO
 

@@ -47,70 +47,28 @@ def get_args():
         ),
         formatter_class=argparse.RawTextHelpFormatter,
     )
-    parser.add_argument("--dataset-json", type=str, help="Json file for datasets.")
-    parser.add_argument("--method-json", type=str, help="Json file for methods.")
-    parser.add_argument("--alias-yaml", type=str, help="Yaml file for datasets and methods alias.")
-    parser.add_argument(
-        "--style-cfg",
-        type=str,
-        required=True,
-        help="Yaml file for plotting curves.",
-    )
-    parser.add_argument(
-        "--curves-npys",
-        required=True,
-        type=str,
-        nargs="+",
-        help="Npy file for saving curve results.",
-    )
-    parser.add_argument("--our-method", type=str, help="Name of our method for highlighting it.")
-    parser.add_argument(
-        "--our-methods", type=str, nargs="+", help="Names of our methods for highlighting it."
-    )
-    parser.add_argument(
-        "--num-rows", type=int, default=1, help="Number of rows for subplots. Default: 1"
-    )
-    parser.add_argument(
-        "--num-col-legend", type=int, default=1, help="Number of columns in the legend. Default: 1"
-    )
-    parser.add_argument(
-        "--mode",
-        type=str,
-        choices=["pr", "fm"],
-        default="pr",
-        help="Mode for plotting. Default: pr",
-    )
-    parser.add_argument(
-        "--include-methods",
-        type=str,
-        nargs="+",
-        help="Names of only specific methods you want to evaluate.",
-    )
-    parser.add_argument(
-        "--exclude-methods",
-        type=str,
-        nargs="+",
-        help="Names of some specific methods you do not want to evaluate.",
-    )
-    parser.add_argument(
-        "--include-datasets",
-        type=str,
-        nargs="+",
-        help="Names of only specific datasets you want to evaluate.",
-    )
-    parser.add_argument(
-        "--exclude-datasets",
-        type=str,
-        nargs="+",
-        help="Names of some specific datasets you do not want to evaluate.",
-    )
-    parser.add_argument(
-        "--separated-legend", action="store_true", help="Use the separated legend."
-    )
-    parser.add_argument("--sharey", action="store_true", help="Use the shared y-axis.")
-    parser.add_argument("--save-name", type=str, help="the exported file path")
-    args = parser.parse_args()
+    # required args
+    parser.add_argument("--dataset-json", type=str, default=['./json/config_dataset.json'], help="Json file for datasets.")
+    parser.add_argument("--method-json", type=str, default=['./json/config_method_others.json', './json/config_method_ours.json'], help="Json file for methods.")
+    parser.add_argument("--style-cfg", type=str, default='./config/two_row_style.yml', help="Yaml file for plotting curves.")
+    parser.add_argument("--curves-npys", type=str, default='./output/rgbd_curves_all.npy', nargs="+", help="Npy file for saving curve results.")
 
+    # not required args
+    # parser.add_argument("--alias-yaml", type=str, default='./config/rgbd_aliases.yaml', help="Yaml file for datasets and methods alias.")
+    parser.add_argument("--alias-yaml", type=str, default=None, help="Yaml file for datasets and methods alias.")
+    parser.add_argument("--our-method", type=str, default='Ours', help="Name of our method for highlighting it.")
+    parser.add_argument("--our-methods", type=str, nargs="+", help="Names of our methods for highlighting it.")
+    parser.add_argument("--num-rows", type=int, default=2, help="Number of rows for subplots. Default: 1")
+    parser.add_argument("--num-col-legend", type=int, default=1, help="Number of columns in the legend. Default: 1")
+    parser.add_argument("--mode", type=str, choices=["pr", "fm"], default="pr", help="Mode for plotting. Default: pr")
+    parser.add_argument("--include-methods", type=str, nargs="+", help="Names of only specific methods you want to evaluate.")
+    parser.add_argument("--exclude-methods", type=str, nargs="+", help="Names of some specific methods you do not want to evaluate.",)
+    parser.add_argument("--include-datasets", type=str, nargs="+", help="Names of only specific datasets you want to evaluate.")
+    parser.add_argument("--exclude-datasets", type=str, nargs="+", help="Names of some specific datasets you do not want to evaluate.")
+    parser.add_argument("--separated-legend", action="store_true", help="Use the separated legend.")
+    parser.add_argument("--sharey", action="store_true", help="Use the shared y-axis.")
+    parser.add_argument("--save-name", type=str, default='./output/result.png', help="the exported file path")
+    args = parser.parse_args()
     return args
 
 
@@ -128,8 +86,8 @@ def main(args):
         axes_setting={
             # pr曲线的配置
             "pr": {
-                "x_label": "Recall",
-                "y_label": "Precision",
+                "x_label": "RecallPrecision",
+                "y_label": "",
                 "x_ticks": np.linspace(0.5, 1, 6),
                 "y_ticks": np.linspace(0.7, 1, 6),
             },
@@ -157,3 +115,4 @@ def main(args):
 if __name__ == "__main__":
     args = get_args()
     main(args)
+    print('绘制完成')

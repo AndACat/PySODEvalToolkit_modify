@@ -4,7 +4,7 @@ import os
 import textwrap
 import warnings
 
-from metrics import cal_sod_matrics
+from metrics import cal_sod_metrics
 from utils.generate_info import get_datasets_info, get_methods_info
 from utils.misc import make_dir
 from utils.recorders import METRIC_MAPPING
@@ -38,67 +38,30 @@ def get_args():
     EXAMPLES:
 
     python eval_all.py \
-        --dataset-json configs/datasets/json/rgbd_sod.json \
-        --method-json configs/methods/json/rgbd_other_methods.json configs/methods/json/rgbd_our_method.json --metric-npy output/rgbd_metrics.npy \
+        --dataset-json configs_datasets_json_rgbd_sod.json \
+        --method-json configs_methods_json_rgbd_other_methods.json configs_methods_json_rgbd_our_method.json \
+        --metric-npy output/rgbd_metrics.npy \
         --curves-npy output/rgbd_curves.npy \
         --record-tex output/rgbd_results.txt
     """
         ),
         formatter_class=argparse.RawTextHelpFormatter,
     )
-    parser.add_argument("--dataset-json", required=True, type=str, help="Json file for datasets.")
-    parser.add_argument(
-        "--method-json", required=True, nargs="+", type=str, help="Json file for methods."
-    )
+    parser.add_argument("--dataset-json", type=str, help="Json file for datasets.")
+    parser.add_argument("--method-json", nargs="+", type=str, help="Json file for methods.")
+    # parser.add_argument("--method-json", nargs="+", type=str, help="Json file for methods.", default=['./json/config_method_ours.json'])
     parser.add_argument("--metric-npy", type=str, help="Npy file for saving metric results.")
     parser.add_argument("--curves-npy", type=str, help="Npy file for saving curve results.")
     parser.add_argument("--record-txt", type=str, help="Txt file for saving metric results.")
-    parser.add_argument("--to-overwrite", action="store_true", help="To overwrite the txt file.")
+    parser.add_argument("--to-overwrite", action="store_true", help="To overwrite the txt file.", default=True)
     parser.add_argument("--record-xlsx", type=str, help="Xlsx file for saving metric results.")
-    parser.add_argument(
-        "--include-methods",
-        type=str,
-        nargs="+",
-        help="Names of only specific methods you want to evaluate.",
-    )
-    parser.add_argument(
-        "--exclude-methods",
-        type=str,
-        nargs="+",
-        help="Names of some specific methods you do not want to evaluate.",
-    )
-    parser.add_argument(
-        "--include-datasets",
-        type=str,
-        nargs="+",
-        help="Names of only specific datasets you want to evaluate.",
-    )
-    parser.add_argument(
-        "--exclude-datasets",
-        type=str,
-        nargs="+",
-        help="Names of some specific datasets you do not want to evaluate.",
-    )
-    parser.add_argument(
-        "--num-workers",
-        type=int,
-        default=4,
-        help="Number of workers for multi-threading or multi-processing. Default: 4",
-    )
-    parser.add_argument(
-        "--num-bits",
-        type=int,
-        default=3,
-        help="Number of decimal places for showing results. Default: 3",
-    )
-    parser.add_argument(
-        "--metric-names",
-        type=str,
-        nargs="+",
-        default=["mae", "fm", "em", "sm", "wfm"],
-        choices=METRIC_MAPPING.keys(),
-        help="Names of metrics",
-    )
+    parser.add_argument("--include-methods", type=str, nargs="+", help="Names of only specific methods you want to evaluate.")
+    parser.add_argument("--exclude-methods", type=str, nargs="+", help="Names of some specific methods you do not want to evaluate.")
+    parser.add_argument("--include-datasets", type=str, nargs="+", help="Names of only specific datasets you want to evaluate.")
+    parser.add_argument("--exclude-datasets", type=str, nargs="+", help="Names of some specific datasets you do not want to evaluate.")
+    parser.add_argument("--num-workers", type=int, default=4, help="Number of workers for multi-threading or multi-processing. Default: 4")
+    parser.add_argument("--num-bits", type=int, default=3, help="Number of decimal places for showing results. Default: 3")
+    parser.add_argument("--metric-names", type=str, nargs="+", default=["mae", "fm", "em", "sm", "wfm"], choices=METRIC_MAPPING.keys(), help="Names of metrics")
     args = parser.parse_args()
 
     if args.metric_npy is not None:
@@ -109,13 +72,37 @@ def get_args():
         make_dir(os.path.dirname(args.record_txt))
     if args.record_xlsx is not None:
         make_dir(os.path.dirname(args.record_xlsx))
-    if args.to_overwrite and not args.record_txt:
-        warnings.warn("--to-overwrite only works with a valid --record-txt")
+    # if args.to_overwrite and not args.record_txt:
+    #     warnings.warn("--to-overwrite only works with a valid --record-txt")
     return args
 
+if __name__ == "__main__":
+    # partten = 'others'
+    # partten = 'Ours'
+    partten = 'ours'
 
-def main():
     args = get_args()
+    args.dataset_json = './json/config_dataset.json'
+    if partten == 'others':
+        args.record_xlsx = 'output/others.xlsx'
+        args.method_json = ['./json/config_method_others.json']
+        args.metric_npy = 'output/rgbd_metrics_others.npy'
+        args.curves_npy = 'output/rgbd_curves_others.npy'
+        args.record_txt = 'output/rgbd_results_others.txt'
+    elif partten == 'ours':
+        args.record_xlsx = 'output/ours.xlsx'
+        args.method_json = ['./json/config_method_ours.json']
+        args.metric_npy = 'output/rgbd_metrics_ours.npy'
+        args.curves_npy = 'output/rgbd_curves_ours.npy'
+        args.record_txt = 'output/rgbd_results_ours.txt'
+    elif partten == 'all':
+        args.record_xlsx = 'output/all.xlsx'
+        args.method_json = ['./json/config_method_others.json', './json/config_method_ours.json']
+        args.metric_npy = 'output/rgbd_metrics_all.npy'
+        args.curves_npy = 'output/rgbd_curves_all.npy'
+        args.record_txt = 'output/rgbd_results_all.txt'
+    else:
+        assert False, "错误"
 
     # 包含所有数据集信息的字典
     datasets_info = get_datasets_info(
@@ -132,7 +119,7 @@ def main():
     )
 
     # 确保多进程在windows上也可以正常使用
-    cal_sod_matrics.cal_sod_matrics(
+    cal_sod_metrics.cal_sod_metrics(
         sheet_name="Results",
         to_append=not args.to_overwrite,
         txt_path=args.record_txt,
@@ -143,11 +130,7 @@ def main():
         metrics_npy_path=args.metric_npy,
         num_bits=args.num_bits,
         num_workers=args.num_workers,
-        use_mp=False,
+        use_mp=True,
         metric_names=args.metric_names,
         ncols_tqdm=119,
     )
-
-
-if __name__ == "__main__":
-    main()

@@ -1,0 +1,12 @@
+dataset: {
+    "NJUD": "NJUD",  # 可以将绘图上本应显示的NJUD500，改成NJUD
+    "NLPR": "NLPR",
+    "SIP": "SIP",
+    "STEREO1000": "STEREO1000",
+    "RGBD135": "RGBD135",
+    "SSD": "SSD",
+    "LFSD": "LFSD",
+    "STEREO797": "STEREO797",
+}
+
+

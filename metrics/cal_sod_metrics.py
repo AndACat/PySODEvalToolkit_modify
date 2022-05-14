@@ -68,7 +68,7 @@ class Recorder:
             self.txt_recorder(method_results=method_metrics, method_name=method_name)
 
 
-def cal_sod_matrics(
+def cal_sod_metrics(
     sheet_name: str = "results",
     txt_path: str = "",
     to_append: bool = True,
@@ -196,10 +196,47 @@ def cal_sod_matrics(
 
     if curves_npy_path:
         make_dir(os.path.dirname(curves_npy_path))
+        back = defaultdict(dict)
+        # 在此篡改NJUD*为NJUD
+        # 把所有以NJUD开头的值，都合并到NJUD一个键值对上
+        for key, val in recorder.curves.items():
+            if str(key).startswith('NJUD'):
+                if len(back['NJUD']) == 0:
+                    back['NJUD'] = val
+                else:
+                    z = back['NJUD'].copy()
+                    z.update(val)
+                    back['NJUD'] = z
+            else:
+                back[key] = val
+        recorder.curves = back
+        # 保存json文件，方便后续查找
+        # f = open(curves_npy_path)
+        # f.write(recorder.curves)  # 将字符串写入文件中
+
         np.save(curves_npy_path, recorder.curves)
+
         print(f"All curves has been saved in {curves_npy_path}")
     if metrics_npy_path:
         make_dir(os.path.dirname(metrics_npy_path))
+
+        back = defaultdict(dict)
+        # 在此篡改NJUD*为NJUD
+        # 把所有以NJUD开头的值，都合并到NJUD一个键值对上
+        for key, val in recorder.metrics.items():
+            if str(key).startswith('NJUD'):
+                if len(back['NJUD']) == 0:
+                    back['NJUD'] = val
+                else:
+                    z = back['NJUD'].copy()
+                    z.update(val)
+                    back['NJUD'] = z
+            else:
+                back[key] = val
+        recorder.metrics = back
+        # 保存json文件，方便后续查找
+        # f = open(metrics_npy_path)
+        # f.write(recorder.metrics)  # 将字符串写入文件中
         np.save(metrics_npy_path, recorder.metrics)
         print(f"All metrics has been saved in {metrics_npy_path}")
     formatted_string = formatter_for_tabulate(recorder.metrics)

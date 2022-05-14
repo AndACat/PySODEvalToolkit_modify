@@ -24,7 +24,7 @@ def group_names(names: list) -> dict:
     return grouped_data
 
 
-def cal_cosod_matrics(
+def cal_cosod_metrics(
     data_type: str = "rgb_sod",
     txt_path: str = "",
     to_append: bool = True,

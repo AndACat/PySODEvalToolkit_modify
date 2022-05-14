@@ -1,0 +1,18 @@
+.num1{
+    color: red;
+    font-weight: bold;
+}
+.num2{
+    color: dodgerblue;
+    font-weight: bold;
+}
+.num3{
+    color: darkorchid;
+    font-weight: bold;
+}
+.big{
+    font-size: 24px;
+}
+.second{
+    font-size: 20px;
+}

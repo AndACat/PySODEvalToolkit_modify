@@ -7,8 +7,8 @@ tips:本项目改编自https://github.com/lartpang/PySODEvalToolkit <br>
 1. 改编了配置文件等相关，更方便我自己使用
 2. 增加了NJUD多个数据集版本之间的直接合并，可能也只有我自己知道是什么意思
 3. 增加了将npy文件转换为可视化html页面，更加方便的查看指标排名，如下图，可直接查看指标的排名名次等信息
-![img.png](img.png)
-#使用步骤
+![https://github.com/AndACat/PySODEvalToolkit_modify/blob/master/img.png?raw=true](img.png)
+# 使用步骤
 1. 先配置文件
 配置好`config/config_method_ours.py``config_method_others.py``config_dataset.py`
 2. 转换配置文件
